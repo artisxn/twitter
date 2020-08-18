@@ -1,0 +1,47 @@
+{
+    "name": "codicastudio/twitter",
+    "description": "A noobs worthless garbage, just learning.",
+    "keywords": [
+        "worthless garabage by a noob."
+    ],
+    "homepage": "https://github.com/codicastudio/twitter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael J Brown",
+            "email": "codicastudiodev@gmail.com",
+            "homepage": "https://codicastudio.dev",
+            "role": "Developer"
+        }
+    ],
+
+    "require": {
+        "php": "^7.4.8",
+        "illuminate/support": "^7.0",
+        "atymic/tmhoauth": "0.8.6",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "codicastudio\\Twitter": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:ci": "phpunit --verbose --coverage-clover=coverage.xml"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codicastudio\\Twitter\\TwitterServiceProvider"
+            ],
+            "aliases": {
+                "Twitter": "codicastudio\\Twitter\\Facades\\Twitter"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
